@@ -27,7 +27,6 @@ Crypt.prototype = {
 		for(var i=0,dLen=data.length,kLen=key.length;i<dLen;i++){
 			data[i] += key[i%kLen];
 		}
-		console.log(Crypt.binaryArrayToString(data));
 		return BASE64.encoder(Crypt.binaryArrayToString(data));
 	},
 	/**
